@@ -1,0 +1,159 @@
+\rule[2ex]{\textwidth}{2pt}\\
+
+
+\begin{enumerate}
+    \item[6.] Resuelva el PVI
+\end{enumerate}
+\begin{align*}
+    x\dv{y}{x} = -2xy+ \frac{x}{1+e^{2x}}, \qquad y(1)= 1
+\end{align*}
+\begin{align*}
+    4x \dv{y}{x} = -8y + \frac{x}{1+x^{3}}, \qquad y(1)=1
+\end{align*}
+
+\begin{itemize}
+    \item \begin{proof}
+Consideramos la ecuación
+
+$$x\frac{dy}{dx}=-2xy+\frac{x}{1+e^{2x}}$$
+
+sumando $2xy$ en ambos miembros obtenemos
+
+$$x\frac{dy}{dx}+2xy=\frac{x}{1+e^{2x}}$$
+
+dividimos ambos miembros de la ecuación por $x$
+
+$$\frac{dy}{dx}+2y=\frac{1}{1+e^{2x}}$$
+
+aqui observamos que tenemos una ecuación de la forma $\frac{dy}{dx}+p(x)y=q(x)$, por tanto vamos a obtener el factor integrante 
+
+$$\mu=e^{{\int} p(x)dx}$$
+
+para $\int p(x)dx$ tenemos
+
+$$\int p(x)dx=\int 2 dx=2x$$
+
+por tanto tenemos que el factor integrante es
+
+$$\mu=e^{2x}$$
+
+Ahora multiplicamos ambos miembros de la ecuación por $\mu=e^{2x}$ para obtener
+
+$$e^{2x}(\frac{dy}{dx}+2y)=e^{2x}\frac{1}{1+e^{2x}} $$
+
+$$e^{2x}\frac{dy}{dx}+e^{2x}2y=e^{2x}\frac{1}{1+e^{2x}} $$
+
+el miembro de la izquierda representa la diferencial del producto de la función a buscar $y(x)$ con la función $e^{2x}$, es decir:
+
+$$d(y\cdot e^{2x})=e^{2x}\frac{1}{1+e^{2x}}$$
+
+integramos ambos miembros de la ecuación anterior 
+
+$$\int d(y\cdot e^{2x})dx=\int e^{2x}\frac{1}{1+e^{2x}}dx$$
+
+$$y\cdot e^{2x}=\int e^{2x}\frac{1}{1+e^{2x}}dx$$
+
+por lo que obtenemos
+
+$$y=\frac{1}{e^{2x}}\int \frac{e^{2x}}{1+e^{2x}}dx$$
+
+resolvemos la integral tomando $u=1+e^{2x}$, obtenemos
+
+$$y=\frac{1}{e^{2x}}\left[ln(e^{2x}+1)^{\frac{1}{2}}+C\right]$$
+
+ahora sustituyendo los valores iniciales $y(1)=1$ para obtener la constante 
+
+$$1=\frac{1}{e^2}\left[ln(e^2+1)^{\frac{1}{2}}+C\right]$$
+
+despejando C obtenemos
+
+$$C=e^2-ln(e^2+1)^{\frac{1}{2}}$$
+
+sustituyendo obtenemos
+
+$$y=\frac{1}{e^{2x}}\left[ln(e^{2x}+1)^{\frac{1}{2}}+e^2-ln(e^2+1)^{\frac{1}{2}}\right]$$
+
+por tanto la solución al PVI es
+
+$$y=\frac{e^2}{e^{2x}}=e^{2(1-x)}$$
+
+\end{proof}
+
+  \item \begin{proof}
+
+Consideramos la ecuación
+
+$$4x\frac{dy}{dx}=-8y+\frac{x}{1+x^3}$$
+
+sumando $8y$ en ambos miembros obtenemos
+
+$$4x\frac{dy}{dx}+8y=\frac{x}{1+x^3}$$
+
+dividimos ambos miembros de la ecuación por $4x$
+
+$$\frac{dy}{dx}+\frac{2y}{x}=\frac{1}{4(1+x^3)}$$
+
+aqui observamos que tenemos una ecuación de la forma $\frac{dy}{dx}+p(x)y=q(x)$, por tanto vamos a obtener el factor integrante 
+
+$$\mu=e^{{\int} p(x)dx}$$
+
+para $\int p(x)dx$ tenemos
+
+$$\int p(x)dx=\int \frac{2}{x} dx=2ln(x)$$
+
+por tanto tenemos que el factor integrante es
+
+$$\mu=e^{2ln(x)}=x^2$$
+
+Ahora multiplicamos ambos miembros de la ecuación por $\mu=x^{2}$ para obtener
+
+$$x^2(\frac{dy}{dx}+\frac{2y}{x})=x^2\frac{1}{1+x^3} $$
+
+$$x^2\frac{dy}{dx}+x^2\frac{2y}{x}=x^2\frac{1}{1+x^3}$$
+
+el miembro de la izquierda representa la diferencial del producto de la función a buscar $y(x)$ con la función $x^2$, es decir:
+
+$$d(y\cdot x^2)=x^2\frac{1}{1+x^3}$$
+
+integramos ambos miembros de la ecuación anterior 
+
+$$\int d(y\cdot x^2)dx=\int x^2\frac{1}{1+x^3}dx$$
+
+$$y\cdot x^2=\int \frac{x^2}{1+x^3}dx$$
+
+por lo que obtenemos
+
+$$y=\frac{1}{x^2}\int \frac{x^2}{1+x^3}dx$$
+
+resolvemos la integral tomando $u=1+x^3$, obtenemos
+
+$$y=\frac{1}{x^2}\left[ln|x^3+1|^{\frac{1}{3}}+C\right]$$
+
+ahora sustituyendo los valores iniciales $y(1)=1$ para obtener la constante 
+
+$$1=\frac{1}{1}\left[ln(2)^{\frac{1}{3}}+C\right]$$
+
+despejando C obtenemos
+
+$$C=-ln(2)^{\frac{1}{3}}$$
+
+sustituyendo obtenemos
+
+$$y=\frac{1}{x^2}\left[ln|x^3+1|^{\frac{1}{3}}-ln(2)^{\frac{1}{3}}\right]$$
+
+por tanto la solución al PVI es
+
+$$y=x^{-2}\left[ ln|\frac{x^3+1}{2}|^{\frac{1}{3}} \right]$$
+  
+  
+\end{proof}
+
+ 
+\end{itemize}
+
+\rule[2ex]{\textwidth}{2pt}\\
+
+
+
+
+

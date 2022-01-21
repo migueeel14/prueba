@@ -1,0 +1,116 @@
+\begin{enumerate}
+    \item[5.] Resuelve la ecuación de Ricatti con valores iniciales
+\end{enumerate}
+\begin{align*}
+    y' = 3t^{-2}-t^{-4}+2(t^{-1}-t^{-3})y-t^{-2}y^{2}, \qquad y(1)= - \frac{1}{2}, \qquad y_{1}(t)=-\frac{1}{t}
+\end{align*}
+
+\textit{ \textbf{Solucion}}
+
+Identifiquemos las ecuaciones:
+
+$$q_1(t)=3t^{-2}-t^{-4}$$
+$$q_2(t)=2(t^{-1}-t^{-3})$$
+$$q_3(t)=-t^{-2}$$
+
+Notemos que
+
+$$y_{1}'= \frac{1}{t^{2}} \Rightarrow $$  
+
+$$\frac{1}{t^{2}}=3t^{-2}-t^{-4}+2(t^{-1}-t^{-3})(-\frac{1}{t})(-t^{-2}(-\frac{1}{t})^{2} \Rightarrow $$ 
+
+Simplificando
+
+$$\frac{1}{t^{2}}=\frac{1}{t^{2}} \therefore es de Ricatti. $$
+
+Usando la solución particular dada.
+
+$$y=-\frac{1}{t}+\frac{1}{z}$$
+
+Sustituyendo en la forma
+
+$$z'+(2q_3(x)(-\frac{1}{t})+q_2(x))z=-q_3(x) \Rightarrow$$
+$$z'+(2(-\frac{1}{t^{2}})(-\frac{1}{t})+\frac{2}{t}-\frac{2}{t^{3}})z=\frac{1}{t^{2}} \Rightarrow$$
+$$z'+\frac{2}{t}z=\frac{1}{t^{2}}$$
+
+Resolviendo esta ecuación lineal
+
+$$\mu(t)=e^{\int p(t)dt}$$
+
+donde $p(t)=\frac{2}{t} \Rightarrow$
+
+$$2\int \frac{1}{t}dt=ln(t^{2}) \therefore \mu(t)=t^{2} \Rightarrow$$
+
+$$t^{2}z'+t^{2}\frac{2}{t}z=1 \therefore$$
+$$t^{2}z'+2tz=1 \Rightarrow \frac{\mathrm{d} t^{2}z}{\mathrm{d} x}=1$$
+
+Integrando
+
+$$t^{2}z=\int dt \Rightarrow t^{2}z=t+c \therefore z=\frac{t+c}{t^{2}}$$
+
+Regresando al contexto original
+
+$$y=-\frac{1}{t}+\frac{1}{z} \Rightarrow z=\frac{t}{ty+1}$$
+
+Por lo tanto, la solución es
+
+$$\frac{t}{ty+1}=\frac{t+c}{t^{2}}$$
+
+Resolviendo el PVI $y(1)=-\frac{1}{2}$
+
+$$c=1$$
+
+\begin{align*}
+    y'= - (t^{2}+6t+4)+2(t+3)y-y^{2}, \qquad y(1)= \frac{5}{2}; \qquad y_{1}(t)=t+1
+\end{align*}
+
+\textit{ \textbf{Solucion}}
+
+Identifiquemos las ecuaciones:
+
+$$q_1(t)=-t^{2}-6t-4$$
+$$q_2(t)=2t+6$$
+$$q_3(t)=-1$$
+
+Notemos que
+
+$$y_{1}'= 1 \Rightarrow $$  
+
+$$1=-t^{2}-6t-4+(2t+6)(t+1)-(t+1)^{2}=1 $$ 
+
+Por lo tanto es de Ricatti.
+
+
+Sustituyendo en la forma
+
+$$z'+(2q_3(x)(t+1)+q_2(x))z=-q_3(x) \Rightarrow$$
+$$z'+(2(-1)(t+1)+2t+6)z=1 \Rightarrow$$
+$$z'+4z=1$$
+
+Resolviendo esta ecuación lineal
+
+$$\mu(t)=e^{\int p(t)dt}$$
+
+donde $p(t)=4 \Rightarrow$
+
+$$4\int dt = 4t \therefore \mu(t)=e^{4t} \Rightarrow$$
+
+$$e^{4t}z'+4e^{4t}z=e^{4t} \Rightarrow$$
+$$\frac{\mathrm{d} e^{4t}z}{\mathrm{d} x}=e^{4t}$$
+$$e^{4t}z=\int e^{4t} dt$$
+
+Resolviendo
+
+$$z=\frac{\frac{1}{4}e^{4t}+c}{e^{4t}}$$
+
+por otro lado, como $$y=t+1+\frac{1}{z} \therefore z=\frac{1}{y-t-1}$$
+
+Por lo tanto la solución es
+
+$$\frac{1}{y-t-1}=\frac{\frac{1}{4}e^{4t}+c}{e^{4t}}$$
+
+Resolviendo el PVI $y(1)=\frac{5}{2}$
+
+$$c=2e^{4}-\frac{e^{4}}{4}\simeq 95.55$$
+
+

@@ -1,0 +1,96 @@
+\begin{enumerate}
+    \item[2.] Resuelve el PVI asociado a la ecuación separable
+\begin{enumerate}
+    \item $\displaystyle \dv{y}{x}= \frac{(y^{2}-y)x}{x^{2}+1}, \quad y(0)=2$\\
+    
+\textit{ \textbf{Solucion}}    
+
+    Primero multiplicamos por el diferencial $(dx)$
+    \begin{align*}
+        \frac{x(y^{2}-y)dx}{x^{2}+1}= dy
+    \end{align*}
+    Dividimos entre $(y^{2}-y)$
+    \begin{align*}
+        \frac{xdx}{x^{2}+1}= \frac{dy}{y^{2}-y}
+    \end{align*}
+    Como es una ecuación separable integramos ambos lados de la ecuación
+    \begin{align*}
+        \int \frac{x}{x^{2}+1}dx = \int \frac{1}{y^{2}-y}dy
+    \end{align*}
+    Calculamos las integrales resultantes
+    \begin{align*}
+        \int \frac{x}{x^{2}+1} dx
+         & & \text{Usamos una sustitución tomando } u=x^{2}+1 \rightarrow \frac{1}{2}du=xdx
+    \end{align*}
+    donde tenemos:
+    \begin{align*}
+        \int \frac{x}{x^{2}+1}dx &= \frac{1}{2}\int \frac{1}{u}du\\
+        & = \frac{1}{2} \ln \abs{u}\\
+        & = \frac{1}{2} \ln \abs{x^{2}+1}+C \numberthis
+    \end{align*}
+    Por otro lado
+    \begin{align*}
+        \int \frac{1}{y^{2}-y}dy &= \int \frac{1}{(y-1)}dy\\
+        & = \int \frac{1}{y-1}-\frac{1}{y}dy\\
+        & = - \int \frac{1}{y}dy + \int \frac{1}{y^{2}-y}dy\\
+        & = \ln \abs{y-1} - \ln \abs{y} +C \numberthis
+    \end{align*}
+    Sustituyendo en nuestra ecuación inicial los valores (2) y (3) tenemos:
+    \begin{align*}
+         \ln \abs{y-1} - \ln \abs{y} = \frac{1}{2} \ln \abs{x^{2}+1}+C
+    \end{align*}
+    Ahora usamos el valor proporcionado $y(0)=2$
+    \begin{align*}
+         \ln \abs{y-1} - \ln \abs{y} = \frac{1}{2} \ln \abs{x^{2}+1}+C \\
+          \ln \abs{2-1} - \ln \abs{2} = \frac{1}{2} \ln \abs{0^{2}+1}+C
+    \end{align*}
+    Despejando $C$ tenemos
+    \begin{align*}
+        C= - \ln\abs{2}
+    \end{align*}
+    \item $\displaystyle (1+x^{4})\dv{y}{x}=-x(1+4y^{2}), \quad y(1)=0$\\
+    
+\textit{ \textbf{Solucion}}
+    
+    Expresando la ecuación de otra forma tenemos
+    \begin{align*}
+        \frac{(1+x^{4})dy}{dx}=-x(1+4y^{2})
+    \end{align*}
+    Multiplicando por el diferencial $(dx)$
+    \begin{align*}
+        x(4y^{2}+1)dx = (x^{4}+1)dy
+    \end{align*}
+    Dividimos entre $(-4y^{2}-1)$ y $(x^{4}+1)$
+    \begin{align*}
+        \frac{xdx}{x^{4}+1}=-\frac{dy}{4y^{2}+1}
+    \end{align*}
+    Como es una ecuación separable integramos ambos lados
+    \begin{align*}
+        \int \frac{x}{x^{4}+1}dx = -\int \frac{1}{4y^{2}+1}dy 
+    \end{align*}
+    Calculamos las integrales resultantes:
+    \begin{align*}
+        \int \frac{x}{x^{4}+1}dx
+        & & \text{Usamos una sustitución tomando: } u=x^{2}\rightarrow \frac{1}{2}du =xdx
+    \end{align*}
+    \begin{align*}
+        \int \frac{x}{x^{4}+1} dx & = \int \frac{1}{2u^{2}+2} du\\
+        & = \int \frac{1}{2(u^{2}+1)}du\\
+        & = \frac{1}{2}\arctan (u)\\
+        & = \frac{1}{2}\arctan (x^{2}) + C \numberthis
+    \end{align*}
+    \begin{align*}
+        - \int \frac{1}{4y^{2}+1}dy & = - \int \frac{1}{2(x^{2}+1)}dx\\
+        & = -\frac{1}{2}\arctan (x)\\
+        & = -\frac{1}{2}\arctan (2y) + C \numberthis
+    \end{align*}
+    Sustituyendo en nuestra ecuación inicial con (4) y (5) tenemos:
+\begin{align*}
+    - \frac{1}{2}\arctan (2y)= \frac{1}{2}\arctan (x^{2})+C
+\end{align*}
+Ahora usamos el valor proporcionado $y(1)=0$
+\begin{align*}
+    C= - \frac{\pi}{8}
+\end{align*}
+\end{enumerate}
+\end{enumerate}

@@ -1,0 +1,72 @@
+\begin{enumerate}
+    \item[3.] Resuelve la ecuación homogénea 
+\begin{enumerate}
+    \item $(-y^{3}+x^{3}) \dd x - xy^{2} \dd y = 0$\\
+    
+\textit{ \textbf{Solucion}}
+    
+    \begin{align*}
+        \text{Para } M &= -y^{3}+x^{3}\\
+        N & = xy^{2}
+    \end{align*}
+Ambas ecuaciones son homogeneas y de grado 3.
+\begin{align*}
+    (-y^3+x^3)dx-xy^2dy & = 0\\ 
+    \left(1-\dfrac{y^3}{x^3}\right)dx-\dfrac{y^2}{x^2}dy& = 0
+\end{align*}
+Haciendo un cambio de variable tenemos que $u=\frac{y}{x} \rightarrow dy = udx+xdu$
+\allowdisplaybreaks
+\begin{align*}
+     (1-u^3)dx-u^2(udx+xdu)&=0\\ 
+     dx-u^3dx+u^3dx-xu^2du&=0 \\ 
+     dx+xu^2du&=0\\ 
+     dx & = -xu^{2}du\\
+     -\dfrac{dx}{x}&=u^2du\\ 
+     \dfrac{dx}{x}&=-u^2du\\
+     \int \dfrac{dx}{x}&=-\int u^{2}du\\ 
+     \ln \abs{x}&=-\dfrac{u^3}{3}+C\\ 
+     \ln \abs{x}&=-\dfrac{\left(\dfrac{y}{x}\right)^3}{3}+C\\ 
+     3\ln \abs{x}-3c&=-\left(\frac{y}{x}\right)^3\\ 
+     3c-3\ln \abs{x}&=\left(\frac{y}{x}\right)^3\\
+     y^3&=\frac{x^3}{3c-3\ln \abs{x}}\\
+     y&=\sqrt[3]{\frac{x^3}{3c-3\ln \abs{x}}}\\
+\end{align*}
+    \item $(x^{2}y^{3}+x^{5}) \dd x +(x^{3}y^{2}+y^{5}) \dd y = 0, \qquad y(1)= 2$
+    
+\textit{ \textbf{Solucion}}
+    
+    \begin{align*}
+        \text{Para } M &= x^{2}y^{3}+x^{5}\\
+        N & = x^{3}y^{2}+y^{5}
+    \end{align*}
+ Resolviendo:
+ \begin{center}
+     $(x^2y^3+x^5)dx+(x^3y^2+y^5)dy=0$
+ \end{center}
+ Ordenando:
+ \begin{center}
+     $x^2[y^3+x^3]dx+y^2[(x^3+y^2)]dy=0$
+ \end{center}
+ Dividiendo entre $(x^3+y^3)$, tenemos:
+ \begin{align*}
+     x^2dx+y^2dy&=0\\
+     y^2dy&=-x^2dx\\
+     \int y^2dy&=-\int x^2 dx\\
+     \dfrac{y^3}{3}&=-\dfrac{x^3}{3}+C\\
+     y^3&=3(-\dfrac{x^3}{3})+C\\
+     y&=\sqrt{-x+c}
+ \end{align*}
+ Despejando C:
+ \begin{center}
+     $y^3=-x^3+c\rightarrow c=y^3+x^3$
+ \end{center}
+ Para el PVI:
+ \begin{center}
+     $y(1)=2\rightarrow c=9$
+ \end{center}
+ La solución general;
+ \begin{center}
+     $y=\sqrt[3]{9-x}$
+ \end{center}
+\end{enumerate}
+\end{enumerate}

@@ -1,0 +1,99 @@
+\begin{enumerate}
+    \item[4.] Resuelve el PVI
+\end{enumerate}
+\begin{align*}
+    \dv{y}{x} = (x+y+1)^{2}, \qquad y(0)=0
+\end{align*}
+
+\textit{ \textbf{Solucion}}
+
+Consideramos un cambio de variable tal que:
+
+$$u=(x+y+1) \Rightarrow \dv{u}{x}=1+\dv{y}{x}$$
+
+Haciendo el cambio de variable:
+
+$$\dv{y}{x} = \dv{u}{x} -1 =u^{2}=(x+y+1)^{2}$$
+
+Desarrollamos:
+
+$$u=tan(x+c)$$
+$$tan(x+c)=x+y+1$$
+$$y=tan(x+c)-x-1$$
+
+Aplicamos la condicion inicial; $y(0)=0$
+
+$$y=tan(x+c)-x-1$$
+$$0=tan(0+c)-0-1$$
+$$tan(c)=1$$
+$$\therefore c=tan^{-1}(1)=\frac{\pi}{4}$$
+
+$$\therefore y=tan(x+\frac{\pi}{4})-x-1$$
+
+\begin{align*}
+    \dv{y}{x} = \frac{4x-7y}{-4x+7y-5}, \qquad y(0)=1
+\end{align*}
+
+\textit{ \textbf{Solucion}}
+
+Partiendo de nuestra ED inicial, desarrollamos:
+
+$$\dv{y}{x} = \frac{4x-7y}{-4x+7y-5}$$
+$$dy= \frac{4x-7y (dx) }{-4x+7y-5}= \frac{4x-7y-5+5 (dx) }{-4x+7y-5}$$
+$$dy=\frac{(4x-7y+5)-5 (dx) }{-4x+7y-5}=\frac{-5 (dx) }{-4x+7y-5} +1$$
+
+Hacemos un cambio de variable, tal que:
+
+$$u=-4x+7y-5 \Rightarrow y=\frac{u+4x-5}{7} $$
+$$y=\frac{u}{7}+\frac{4x}{7}+\frac{5}{7} \Rightarrow \dv{y}{x}=\frac{du}{7}+\frac{4dx}{7} $$
+
+Sustituimos la variable:
+
+$$dy=\frac{-5 (dx) }{-4x+7y-5} +1$$
+
+$$\frac{du}{7}+\frac{4dx}{7}=(-\frac{5}{u}-1)dx$$
+
+$$\frac{du}{7}=(-\frac{5}{u}-1)dx-\frac{4dx}{7}$$
+
+$$\frac{du}{7}=(-\frac{5}{u}-1-\frac{4}{7})dx$$
+
+$$\frac{du}{7}=(-\frac{5}{u}-\frac{11}{7})dx$$
+
+así obtenemos una ecuación separable, de la forma:
+
+$$-\frac{7u du}{11u+35}=7 dx$$
+
+integramos ambos lados:
+
+$$- \int \frac{7u du}{11u+35}=\int 7 dx$$
+
+realizamos un cambio de variable:
+$$v=11u+35, \frac{dv}{11}=dx$$
+
+$$-\frac{1}{121}\int \frac{v-35}{v} dv =7\int dx$$
+
+$$-\frac{1}{121}\int 1- \frac{35}{v} dv =7x+c$$
+
+$$-\frac{1}{121}(\int 1 dv- \int\frac{35}{v} dv) =7x+c$$
+
+$$-\frac{1}{121}(v-35 \ln \abs{v}) =7x+c$$
+
+$$-\frac{1}{121}(11u+35-35 \ln \abs{11u+35}) =7x+c$$
+
+$$\frac{245 \ln \abs{11u+35}}{121}-\frac{7u}{11} =7x+c$$
+
+Regresamos nuestro cambio de variable:
+
+$$\frac{245 \ln \abs{11(-4x+7y-5)+35}}{121}-\frac{7(-4x+7y-5)}{11} =7x+c$$
+
+$$\frac{245 \ln \abs{(-44x+77y-55)+35}}{121}-\frac{-28x+49y-35}{11} - \frac{77 x}{11}=c$$
+
+$$\frac{245 \ln \abs{(-44x+77y-55)+35}}{121}-\frac{49y}{11} - \frac{49 x}{11}=c$$
+
+aplicamos la condicion inicial; $y(0)=1$
+
+$$\frac{245 \ln \abs{(-44(0)+77(1)-55)+35}}{121}-\frac{49(1)}{11} - \frac{49(0)}{11}=c$$
+
+$$\therefore c=\frac{245 \ln \abs{57}-521}{121}=3.88055$$
+
+$$\therefore \frac{245 \ln \abs{-44x+77y-20}}{121}-\frac{49y}{11}= \frac{49 x}{11} +3.88055$$
