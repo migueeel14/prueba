@@ -1,0 +1,129 @@
+\begin{enumerate}
+    \item[2.] Resuelve el PVI asociado a la ecuación separable
+\end{enumerate}
+
+\begin{enumerate}
+   
+      \item[a)] 
+\begin{align*}
+    \dv{y}{x}= \frac{(y^{2}-y)x}{x^{2}+1}, \quad y(0)=2
+\end{align*}
+
+Vamos a comenzar separando las ecuaciones 
+
+\begin{align*}
+    \dfrac{1}{y^2-y}dy=\dfrac{x}{x^2+1}dx
+\end{align*}
+
+Ahora vamos a integrar
+
+\begin{align*}
+    \int \dfrac{1}{y^2-y}dy&=\int\dfrac{x}{x^2+1}dx\\
+    \Rightarrow \int\dfrac{1}{y^2\pr{1-\frac{1}{y}}}dy&=\int\dfrac{x}{x^2+1}dx
+\end{align*}
+
+Para integrar el miembro izquierdo haremos el cambio de variable $u=1-\dfrac{1}{y}$, $du=\dfrac{1}{y^2}dy$. Por otro lado, para integrar el miembro derecho haremos el cambio de variable $w=x^2+1$, $dw=2xdx$
+
+ \begin{align*}
+ \Rightarrow \int\dfrac{du}{u} &= \dfrac{1}{2}\int \dfrac{dw}{w}\\
+ \Rightarrow \ln \nr{u} + C_1 &= \dfrac{1}{2}\ln \nr{w} + C_2 \\
+ \Rightarrow \ln \nr{1-\dfrac{1}{y}} &= \dfrac{1}{2} \ln \nr{x^2+1} + C_2-C_1 
+ \end{align*}
+ 
+ Aplicando la función exponencial y haciendo $C_3=C_2-C_1$
+ 
+ \begin{align*}
+     \exp\pr{\ln\nr{1-\dfrac{1}{y}}}&=\exp\pr{\ln\nr{x^2+1}^{1/2}+C_3} \\
+     \Rightarrow 1-\dfrac{1}{y}&= \pr{x^2+1}^{1/2}e^{C_3} \\
+     \Rightarrow  \dfrac{1}{y} &= 1-C\pr{x^2+1}^{1/2} \\
+     \therefore y &= \dfrac{1}{1-C\sqrt{x^2+1}}
+ \end{align*}
+ 
+ Aplicando el PVI 
+ 
+ \begin{align*}
+     y\pr{0}=\dfrac{1}{1-C\sqrt{0+1}}&=2 \\ 
+     \Rightarrow  \dfrac{1}{1-C}&=2 \\ 
+     \Rightarrow \dfrac -{1}{2}&=C-1 \\ 
+     \therefore C &= \dfrac{1}{2}
+     \end{align*}
+     
+Por lo que ahora tenemos que la función $y$
+
+\begin{align*}
+    y=\dfrac{1}{1-\frac{1}{2}\sqrt{x^2+1}}=\dfrac{2}{2-\sqrt{x^2+1}}
+\end{align*}
+     
+     \begin{center}
+         \fbox{$\therefore y=\dfrac{2}{2-\sqrt{x^2+1}}$}
+     \end{center}
+
+ 
+
+    \item[b)]
+\begin{align*}
+    (1+x^{4})\dv{y}{x}=-x(1+4y^{2}), \quad y(1)=0
+\end{align*}
+
+Vamos a comenzar separanddo las ecuaciones 
+
+\begin{align*}
+    \dfrac{dy}{1+4y^2}=-\dfrac{xdx}{1+x^4}
+\end{align*}
+
+Ahora vamos a integrar
+
+\begin{align*}
+    \int \dfrac{1}{1+4y^2}=-\int \dfrac{x}{1+x^4}dx
+\end{align*}
+
+Para integrar el miembro izquierdo haremos el cambio de variable $u=2y$, $du=2dy$ y para integrar el miembro derecho haremos $w=x^2$, $dw=2xdx$
+
+\begin{align*}
+    \Rightarrow \dfrac{1}{2}\int \dfrac{1}{1+u^2} du &= -\dfrac{1}{2}\int \dfrac{1}{1+w^2}dw \\
+    \Rightarrow \dfrac{1}{2} \arctan \pr{u} + C_1 &= -\dfrac{1}{2}\arctan\pr{w}+C_2 \\ 
+    \Rightarrow \cc{\dfrac{1}{2}} \arctan\pr{2y} &= -\cc{\dfrac{1}{2}}\arctan\pr{x^2}+C_2-C_1 \\ 
+    \Rightarrow \arctan\pr{2y}&=-\arctan\pr{x^2}+2\pr{C_2-C_1}
+\end{align*}
+
+Haremos $C=2\pr{C_2-C_1}$ y aplicaremos la función tangente, sin olvidar que la función arcotangente es impar
+
+\begin{align*}
+    \Rightarrow \tan\pr{\arctan\pr{2y}}&=\tan\pr{\arctan\pr{-x^2}+C} 
+\end{align*}
+
+Ahora, recordemos la identidad $\tan\pr{\alpha+\beta}=\frac{\tan\alpha+\tan\beta}{1-\tan\alpha\tan\beta}$
+
+\begin{align*}
+    \Rightarrow 2y &= \dfrac{\tan\pr{\arctan\pr{-x^2}}+\tan C}{1-\tan\pr{\arctan\pr{-x^2}}\tan{C}} \\
+    &=\dfrac{C_f - x^2}{1+C_f x^2}
+\end{align*}
+
+Con $C_f=\tan C$. Ya tenemos la solución de la ecuación diferencial
+
+\begin{align*}
+    \therefore y = \dfrac{C_f-x^2}{2+2C_fx^2}
+\end{align*}
+
+Ahora resolvamos el PVI
+
+\begin{align*}
+    y\pr{1}&=\dfrac{C_f-1}{2+2C_f\pr{1}}=0 \\
+    \Rightarrow C_f=1
+\end{align*}
+
+Por lo que ahora tenemos que la función $y$
+
+\begin{align*}
+    y=\dfrac{1-x^2}{2+2x^2}
+\end{align*}
+
+\begin{center}
+    \fbox{$\therefore y=\dfrac{1}{2}\pr{\dfrac{1-x^2}{1+x^2}}$}
+\end{center}
+
+
+
+
+
+\end{enumerate}

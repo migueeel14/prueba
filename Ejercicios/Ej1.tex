@@ -1,0 +1,136 @@
+\begin{enumerate}
+    \item Demuestre que las siguientes ecuaciones no son exactas, encuentra el factor integrante que las vuelve exactas y resuelve los PVI.
+\end{enumerate}
+\begin{enumerate}
+    \item[a)] $(10-6y+e^{-3x})\dd x- 2 \dd y=0, \qquad y(0)=1$
+\begin{align*}
+(10-6y+e^{-3x})\dd x- 2 \dd y=0, \qquad y(0)=1
+\end{align*}
+\end{enumerate}
+Una ecuación diferencial es exacta si $F(x,y)$ tal que en el dominio se cumple que:
+\begin{align*}
+    \frac{\partial F}{\partial x} &= P(x,y)\\
+    \frac{\partial F}{\partial y} &= Q(x,y)
+\end{align*}
+Es fácil ver que $\displaystyle \frac{\partial P}{\partial y} \neq \frac{\partial Q}{\partial x}$, por lo tanto debemos buscar un factor integrante
+\begin{align*}
+    P(x,y)&= 10-6y+e^{-3x}\\
+    Q(x,y)&= -2
+\end{align*}
+Resolviendo la derivada parcial
+\begin{align*}
+    \frac{\frac{\partial P}{\partial y} - \frac{\partial Q}{\partial x}}{Q} & = 3
+\end{align*}
+Por lo tanto
+\begin{equation*}
+    \mu (x) = e^{\int 3 dx} \implies e^{3x}
+\end{equation*}
+Resolviendo con el factor integrante, tenemos que
+\begin{align*}\label{sol:1}
+    e^{3x}[(10-6y+e^{-3x})dx - 2dy]&= 0\\
+    e^{3x}(10-6y+e^{-3x})dx-2e^{3x}dy &= 0 \numberthis
+\end{align*}
+Resolviendo de nuevo las derivadas parciales en \ref{sol:1} tenemos que:
+\begin{align*}
+    \frac{\partial P}{\partial x} &= -6e^{3x} \\
+    \frac{\partial Q}{\partial y} &= -6e^{3x}
+\end{align*}
+Por lo tanto $P = Q$, entonces es exacta.\\
+Dividiendo por $dx$ y reescribiendo la ecuación tenemos que:
+\begin{align*}
+    \dv{x}{y} +3y =\frac{e^{-3x}}{2} +5.
+\end{align*}
+Multiplicando por el factor integrante
+\begin{align*}
+    (e^{3x})\dv{y(x)}{x} + \dv{(e^{3x})}{x}y(x) &= (e^{3x}) \frac{e^{-3x}}{2} +5\\
+     \int \dv{(e^{3x})y(x)}{x} \dd x &= \frac{1}{2} \int \dd x + 5 \int e^{3x}\dd x \\
+     e^{3x} y & = \frac{x}{2}+\frac{5}{3}e^{3x}+C\\
+     y & = \frac{x}{2e^{3x}}+\frac{5}{3}+\frac{C}{e^{3x}}\\
+\end{align*}
+Obteniendo el PVI para $y(0)=1$
+\begin{align*}
+    c = - \frac{2}{3}
+\end{align*}
+Entonces la solución particular es 
+\begin{center}
+    \fbox{$y = \dfrac{x}{2e^{3x}}- \dfrac{2}{3e^{3x}}+\dfrac{5}{3}$}
+\end{center}
+
+
+
+
+\begin{itemize}
+    \item[b)] $\cos x \dd x+ \left( 1 + \frac{2}{y} \right) \sen x \dd y=0, \qquad y(0)=2$
+\end{itemize}
+\begin{align*}
+    \underbrace{\cos x}_{M\pr{x,y}} \dd x+\underbrace{ \left( 1 + \frac{2}{y} \right) \sen x }_{N\pr{x,y}}\dd y=0, \qquad y(0)=2
+\end{align*}
+
+Verifiquemos si se trata de una ecuación exacta, recordando que para que lo sea se debe cumplir que $\dfrac{\partial M}{\partial y}=\dfrac{\partial N}{\partial x}$, en este caso
+
+\begin{align*}
+    \dfrac{\partial M}{\partial y} &= \dfrac{\partial}{\partial x} \cos x = 0 \\
+    \dfrac{\partial N}{\partial x}&=\dfrac{\partial}{\partial x}\left(1+\dfrac{2}{y}\right)\sen x = \left(1+\dfrac{2}{y}\right)\cos x  \neq 0 \\
+    \therefore \dfrac{\partial M}{\partial y} &\neq \dfrac{\partial N}{\partial y}
+\end{align*}
+ 
+ Por lo tanto la ecuación no es exacta. Ahora vamos a encontrar un factor integrante, para lo cual multiplicaremos toda la ecuación por este factor, al cual llamaremos $\mu$, lo importante de este factor es que al agregarlo convertiremos nuestra ecuación no exacta a una exacta 
+ 
+ \begin{align*}
+     \mu \cos x \dd x + \mu \pr{1+\dfrac{2}{y}}\sen x \dd y = 0
+ \end{align*}
+ 
+ Para que sea exacta se debe cumplir que
+ 
+ \begin{align*}
+     \dfrac{\partial}{\partial y} \mu \cos x &= \dfrac{\partial}{\partial x} \mu \pr{1+\dfrac{2}{y}}\sen x \\ 
+     \Rightarrow \cos x \dfrac{\partial}{\partial y} \mu + \mu \cc{\dfrac{\partial }{\partial y} \cos x} &= \pr{1+\dfrac{2}{y}}\pr{\sen x \dfrac{\partial}{\partial x}\mu + \mu \dfrac{\partial}{\partial x}\sen x} \\
+     \Rightarrow \cos x \dfrac{\partial \mu}{\partial y} &= \pr{1+\dfrac{2}{y}}\pr{\sen x\dfrac{\partial \mu}{\partial x}+\mu \cos x}
+ \end{align*}
+ 
+ Para simplificar un un poco la última ecuación, supondremos que $\mu=\mu\pr{x}$, por lo que tenemos
+ 
+ \begin{align*}
+     0&=\pr{1+\dfrac{2}{y}}\pr{\sen x \dfrac{\partial \mu}{\partial x}+\mu\cos x} \\ 
+     \Rightarrow \sen x \dfrac{\partial \mu}{\partial x} &= -\mu \cos x \\
+     \Rightarrow \int \dfrac{d\mu}{\mu} &= -\int\dfrac{\cos x}{\sen x} \dd x \\ 
+     \Rightarrow \ln \nr{\mu} &= -\ln\nr{\sen x} \\ 
+     \therefore \mu &= \dfrac{1}{\sen x}
+ \end{align*}
+ 
+ Ahora verifiquemos que con el factor integrante la ecuación es exacta
+ 
+ \begin{align}
+     \underbrace{\dfrac{\cos x}{\sen x}}_{M\pr{x,y}}\dd x + \underbrace{\pr{1+\dfrac{2}{y}}\cc{\dfrac{\sen x}{\sen x}}}_{N\pr{x,y}}\dd y &= 0
+ \end{align}
+ 
+ Calculemos $M_y$ y $N_x$
+ 
+ \begin{align}
+     \dfrac{\partial }{\partial y} \dfrac{\cos x}{\sen y} &= 0\\
+     \dfrac{\partial}{\partial x} \pr{1+\dfrac{2}{y}}&= 0 \\
+     \therefore \dfrac{\partial M}{\partial y} = \dfrac{\partial N}{\partial x}
+ \end{align}
+ 
+ Ya tenemos una ecuación exacta, que además podemos ver que es separable
+ 
+ \begin{align*}
+     \Rightarrow \dfrac{\cos x}{\sen x}\dd x&=-\pr{1+\dfrac{2}{y}} \dd y\\
+     \int \dfrac{\cos x}{\sen x} \dd x &= -\int \dd y -2\int\dfrac{\dd y}{y} \\ \Rightarrow \ln \nr{\sen x} + C_1 &= -y -2\ln\nr{y} +C_2 \\ 
+     \Rightarrow \sen x &= e^{-y-2\ln\nr{y}}C_3 ~~~~~~~~~~~~~ \text{con $C_3=e^{C_2-C_1}$} \\
+     \Rightarrow \sen x&= \dfrac{C_3}{e^y y^2}
+ \end{align*}
+ 
+ \begin{center}
+     \fbox{$\therefore e^y y^2 = \dfrac{C}{\sen x}$}
+ \end{center}
+ 
+ Aplicando el PVI $x=0$, $y=2$ 
+ 
+ \begin{align*}
+     0&=\dfrac{C_3}{4e^2} \\
+     \therefore C_3 &= 0
+ \end{align*}
+ 
+Veamos que para la condición inicial de $x=0$  tenemos un caso degenerado ya que $\sen x=0 \Rightarrow x=m\pi,~~~~~m\in \mathbb{Z}$  Es decir, la soluciones quedan como lineas verticales paralelas con periodo $\pi$ 
+

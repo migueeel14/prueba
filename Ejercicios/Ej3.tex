@@ -1,0 +1,74 @@
+\begin{enumerate}
+    \item[3.] Resuelve la ecuación homogénea 
+\end{enumerate}
+%\begin{align*}
+%    (-y^{3}+x^{3}) \dd x - xy^{2} \dd y = 0
+%\end{align*}
+%\begin{align*}
+%    (x^{2}y^{3}+x^{5}) \dd x +(x^{3}y^{2}+y^{5}) \dd y = 0, \qquad %y(1)= 2
+%\end{align*}
+
+\begin{itemize}
+    \item[a)] $(-y^3+x^3)dx-xy^2dy=0$
+    \begin{enumerate}
+     \item Verificamos si es homogénea y de que grado es:\\
+    $M=-y^3+x^3$ \hspace{.3cm} y  \hspace{.3cm}$N=xy^2$  \hspace{1cm} Cumplen con ser homogénea y ambas son de grado 3
+    \item Realizamos un cambio de variable: $y=ux$\hspace{1cm} $dy=udx+xdu$\hspace{1cm} $\frac{y}{x}=u$
+    \item Sustituimos en la ecuación inicial:
+    \begin{align*}
+        (x^3-u^3x^3)dx+xu^2x^2(udx+xdu) &= 0\\
+        x^3dx-\cc{u^3x^3dx}+\cc{u^3x^3dx}+x^4u^2du &= 0\\
+        x^3dx+x^4u^2du &= 0
+    \end{align*}
+    Y ahora resolvemos por variables separables:
+    \begin{align*}
+        x^3dx &= -x^4u^2du \\
+        \frac{x^3}{x^4}dx &= -u^2du\\
+        \frac{1}{x}dx  &= -u^2du\\
+        \int\frac{1}{x}dx &= -\int u^2du \\
+        \ln (x) &= -\frac{u^3}{3}+c
+    \end{align*}
+    Sustituimos $u$ y así volver a nuestro contexto original y despejamos $y$:
+    \begin{align*}
+        \ln (x) &= -\frac{\left(\frac{y}{x}\right) ^ 3}{3}+c \\
+        \ln (x) &= -\frac{y^3}{3x^3}+c \\
+        \therefore y &= \sqrt[3]{3x^3(c-\ln (x))}
+    \end{align*}
+    
+    \begin{center}
+        \fbox{$\therefore y = \sqrt[3]{3x^3(c-\ln (x))}$}
+    \end{center}
+    
+    
+     \end{enumerate}
+    
+    
+    
+    
+    
+     \item[b)] $(x^2y^3+x^5)dx + (x^3y^2+y^5)dy=0$, \hspace{1cm} $y(1)=2$
+     \begin{enumerate}
+         \item Verificamos que sea homógenea y de que grado es:\\
+         $M=x^2y^3+x^5$\hspace{.3cm} y \hspace{.3cm} $N=x^3y^2+y^5$ \hspace{.3cm}  Cumplen con ser homogénea y ambas son de grado 5
+         \item Resolvemos:\\
+         Si dividimos la ecuación entre $\left((y+x)(y^2-xy+x^2)\right)$ obtenemos:
+         \begin{equation*}
+             y^2dy+x^2dx=0
+         \end{equation*}
+         La cual podemos resolver por variables separables:
+         \begin{align*} 
+             y^2dy  &= -x^2dx\\
+             \int y^2dy &= - \int x^2dx\\
+             \frac{y^3}{3}  &= - \frac{x^3}{3} + c
+         \end{align*}
+Despejando para $y$ y  $c$ : \hspace{1cm} $y = \sqrt[3]{c-x^3}$ \hspace{2cm}  $c = y^3- x^3$
+       \item Resolviendo el PVI  \hspace{1cm}$y(1)=2$ \\
+       $\Rightarrow$ \hspace{1cm} $c=7$ \hspace{4cm}$\therefore$\hspace{.2cm} $y=\sqrt[3]{7-x^3}$
+       
+       \begin{center}
+           \fbox{$\therefore y=\sqrt[3]{7-x^3}$}
+       \end{center}
+       
+       
+     \end{enumerate}
+\end{itemize}

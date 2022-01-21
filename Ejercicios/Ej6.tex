@@ -1,0 +1,89 @@
+\begin{enumerate}
+    \item[6.] Resuelva el PVI
+\end{enumerate}
+%\begin{align*}
+%    x\dv{y}{x} = -2xy+ \frac{x}{1+e^{2x}}, \qquad y(1)= 1
+%\end{align*}
+%\begin{align*}
+%    4x \dv{y}{x} = -8y + \frac{x}{1+x^{3}}, \qquad y(1)=1
+%\end{align*}
+
+\begin{itemize}
+    \item[a)] $x\dv{y}{x} = -2xy+ \frac{x}{1+e^{2x}}, \qquad y(1)= 1$ \\ \\
+    Tenemos que: $xdy=(-2xy+\frac{x}{1+e^{2x}})dx$\\
+    \begin{align*}
+        \Rightarrow xdy+\left(2xy - \frac{x}{1+e^{2x}}\right)dx &= 0\\
+        \Rightarrow M(x,y)=x \qquad N(x,y) &= 2xy-\frac{x}{1+e^{2x}}\\
+    \end{align*}
+    pero $M(x,y)'=1\not= 2x=N(x,y)'y$ \qquad entonces calculemos el factor integrante:\\
+    \begin{equation*}
+        M=(x,y)_x'=\frac{\partial M}{\partial x} \qquad N(x,y)_y'=\frac{\partial N}{\partial y}
+    \end{equation*}
+    Entonces se tiene que:
+    \begin{align*}
+        M\frac{\partial \mu}{\partial x}=N\frac{\partial \mu}{\partial y} &= \mu \left(\frac{\partial N}{\partial y}-\frac{\partial M}{\partial x}\right) \qquad donde \hspace{0.3cm}\mu (x,y) =\mu (x) \Rightarrow \frac{\partial \mu}{\partial x}=0 \\
+        \Rightarrow \frac{1}{\mu}\frac{du}{dx} &= \frac{1}{M}\left(\frac{\partial N}{\partial y}-\frac{\partial M}{\partial x}\right) \qquad Integramos: \\
+        \Rightarrow\int \frac{d\mu}{\mu}=\int \frac{1}{M}\left(\frac{\partial N}{\partial y}-\frac{\partial M}{\partial x}\right) &= \int2-\frac{1}{x}dx = 2x-\ln(x) \qquad y \qquad\int \frac{d\mu}{\mu}=\ln(\mu) \\
+        \Rightarrow \ln(\mu) &= 2x-\ln(x) \Rightarrow \mu=\frac{e^{2x}}{x} \qquad Multiplicamos \hspace{0.2cm} por:  \hspace{0.2cm} \frac{e^{2x}}{x} \\
+        \Rightarrow x\frac{e^{2x}}{x} dy &+ \left(2xy \frac{e^{2x}}{x} + \frac{e^{2x}}{x1+e^{2x}}\right)dx=0
+    \end{align*}
+    Entonces $M(x,y)_x'=2e^{2x}=N(x,y)_y'$ \hspace{0.5cm}Ahora $F(x,y):dF(x,y)=F'ydy+F'xdx$
+    \begin{align*}
+        \Rightarrow F(x,y)=\int N(x,y)dx=2e^{2x}y-\frac{e^{2x}}{1+e^{2x}}dx &= 2y\int e^{2x}dx- \int \frac{e^{2x}}{1+e^{2x}}dx \\
+        u=2x \Rightarrow \frac{1}{2u} &=cx \qquad du=2dx \Rightarrow \frac{1}{2}du=dx\\
+        \Rightarrow 2y\int e^{2x} dx - \int \frac{e^u}{2(e^u+1)}du \qquad z &= e^u \qquad dz=e^udu\\
+        \Rightarrow 2y\int e^{2x}dx &- \frac{1}{2}\int \frac{1}{z+1}dz\\
+        2ye^{2x} - \frac{1}{2}\ln(z+1) &\Rightarrow 2ye^{2x}-\frac{1}{2}\ln (e^u+1)\\
+        \Rightarrow 2ye^{2x}-\frac{1}{2}\ln (e^{2x}+1) +c &\Rightarrow \left(\cancel{ye^{2x}-\frac{1}{2}\ln(e^{2x}+1)}\right)_y'=e^{2x}\\
+       y=\int M(x,y) - &\left(ye^{2x}-\frac{1}{2}\ln e^{2x} + 1\right)_y'= \int 0dy=0\\
+     \Rightarrow F(x,y) = ye^{2x} - \frac{1}{2}\ln (e^{2x}+1) &\Rightarrow y=\frac{\ln (e^{2x}+1)+c}{2e^{2x}}
+     \end{align*}
+     
+    Como y(1)=1:
+    \begin{align*}
+       1 &= \frac{ln(e^{2(1)}+1)+c}{2e^{2(1)}}\\
+       1 = \frac{ln(e^2+1)+c}{2e^2} &\Rightarrow 2e^2=\ln(e^2+1) + c \Rightarrow 2e^2-\ln (e^2+1)=c\\
+      \therefore y &= \frac{ln(e^{2x}+1)+ 2e^2 + ln(e^2+1)}{2e^{2x}} 
+   \end{align*}
+   
+   \item[b)] $4x \dv{y}{x} = -8y + \frac{x}{1+x^{3}}, \qquad y(1)=1$
+   \begin{align*}
+       \Rightarrow 4xdy &= \left(\frac{x}{1+x^3}-8y\right)dx
+       \Rightarrow 4xdy &+ \left(-\frac{x}{1+x^3}+8y\right)dx=0
+   \end{align*}
+   Tenemos que $M(x.y)=4x \qquad y \qquad N(x,y)=-\frac{x}{1+x^3}+8y$ \\
+   Pero $M(x,y)_x'=4\not=8=N(x,y)_y'$ \qquad al ser diferente buscamos $\mu$\\
+   \begin{align*}
+       \Rightarrow M(x,y)_x'=\frac{\partial M}{\partial x} \qquad &y \qquad N(x,y)_y'=\frac{\partial N}{\partial y}\\
+       \text{Por condición} \qquad M\frac{\partial \mu}{\partial x} &- N\frac{\partial \mu}{\partial y}=\mu \left(\frac{\partial \mu}{\partial y} - \frac{\partial \mu}{\partial x}\right)\\
+       \Rightarrow \mu(x,y)=\mu(x) \Rightarrow \frac{1}{\mu}\frac{\partial \mu}{\partial x} &= \frac{1}{M}\left(\frac{\partial N}{\partial y} - \frac{\partial M}{\partial x}\right) \qquad \text{integramos}\\
+       \Rightarrow \int \frac{d\mu}{\mu}= \int \frac{1}{M}\left(\frac{\partial N}{\partial y} - \frac{\partial M}{\partial x}\right)dx &= \int \frac{1}{x}dx=\ln(x)\\
+       \Rightarrow \ln(\mu)=\ln(x) &\Rightarrow \mu=x
+   \end{align*}
+   Ahora multiplicamos $x$ por $4xdy+\left(8y+\frac{x}{x^3+1}\right)=0$
+   \begin{align*}
+       \Rightarrow M(x,y)=4x^2 \qquad &y \qquad N(x,y)=8xy-\frac{x^2}{x^3+1}
+       \Rightarrow M(x,y)_x'=8x &= N(x,y)_y'
+   \end{align*}
+   Ahora encontraremos $F(x,y)=F_y'dy+F_x'dx$
+   \begin{align*}
+       F(x,y)=\int N(x,y)dx = \int 8xy &- \frac{x^2}{(x+1)(x^2-x+1)}dx=8y\int xdx - \int \frac{x^2}{x^3+1}dx\\
+       u=x^3+1 \qquad du=3x^2dx \Rightarrow &\frac{1}{3}du=x^2dx \Rightarrow \qquad 8y\int xdx-\frac{1}{3}\int \frac{1}{u}du\\
+       \Rightarrow 8y\left(\frac{x^2}{2}-\frac{1}{3}(\ln(u)\right) \Rightarrow 8y(\frac{x^2}{2} &- \frac{1}{3}\ln(x^3+1) \Rightarrow4yx^2-\frac{1}{3}\ln(x^3+1)+c
+   \end{align*}
+   Ahora:
+   \begin{align*}
+       \left(4\not yx^2-\frac{1}{3}\ln(x^3+1)\right)_y' \qquad &\Rightarrow 4x^2\\
+       C=\int M\cancel{(x,y)} - \cancel{(4x^2y -\frac{1}{3}\ln(x^3+1)})_y'dy &=\int 0dy=0\\
+       F(x,y) = 4x^2y-\frac{1}{3}\ln(x^3+1)=c \Rightarrow\frac{1}{3} &\ln(x^3+1)+c=4x^2y \Rightarrow y=\frac{ln(x^3+1)+c}{12x^2}
+   \end{align*}
+   Como $y(1)=1$:
+   \begin{align*}
+       1=\frac{ln(1)^3+1)+c}{12(1)^2} &\Rightarrow 1=\frac{ln(2)+c}{12}\\
+       \Rightarrow 12=\ln(2)+c &\Rightarrow 12-\ln(2)=c\\
+       \therefore y &= \frac{ln(x^3+1)-ln(12)}{12x^2}
+   \end{align*}
+   
+\end{itemize}
+
+

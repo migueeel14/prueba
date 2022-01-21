@@ -1,0 +1,114 @@
+\begin{enumerate}
+    \item[4.] Resuelve el PVI
+\end{enumerate}
+
+\begin{enumerate}
+\item[a)]
+\begin{align*}
+    \dv{y}{x} = (x+y+1)^{2}, \qquad y(0)=0
+\end{align*}
+
+Vamos a hacer el cambio de variable $u=x+y+1$ de modo que tenemos 
+
+\begin{align*}
+    \dx{u}&=1+\dx{y}\\
+    \Rightarrow \dx{y}&=\dx{u}-1
+\end{align*}
+
+De modo que sustituyendo en la ecuación original
+
+\begin{align*}
+    \dx{u}-1&=u^2\\
+    \Rightarrow \dfrac{1}{u^2+1}&=dx
+\end{align*}
+
+Integrando
+
+\begin{align*}
+    \int\dfrac{1}{u^2+1}&=\int dx\\
+    \Rightarrow \arctan\pr{u}+C_1&=x+C_2\\
+    \Rightarrow \tan\pr{\arctan\pr{u}}&=\tan\pr{x+C_2-C_1}  ~~~~~~~~~~~~~~ \text{haciendo  } C_3=C_2-C_1 \\
+    \Rightarrow u&=\tan\pr{x+C_3} ~~~~~~~~~~~~~~~~~~~~~ \text{sustituyamos $u=x+y+1$}\\
+    \Rightarrow x+y+1&=\tan\pr{x+C_3}\\
+    \therefore y&=\tan\pr{x+C_3}-x-1
+\end{align*}
+
+Resolviendo el PVI tenemos
+
+\begin{align*}
+    y\pr{0}&=\tan\pr{C_3}-1=0\\
+    \Rightarrow C_3&=\arctan\pr{1}\\
+    \therefore C_3&=\dfrac{\pi}{4}
+\end{align*}
+
+Por lo que la solución queda como
+
+\begin{center}
+    \fbox{$\therefore y=\tan\pr{x+\dfrac{\pi}{4}}-\pr{x+1}$}
+\end{center}
+
+Podemos ver también la  solución, utilizando la identidad $\tan\pr{\alpha+\beta}=\frac{\tan\alpha+\tan\beta}{1-\tan\alpha\tan\beta}$,  como
+
+\begin{align*}
+    y=-\pr{\dfrac{\tan\pr{x}+1}{\tan\pr{x}-1}+x+1}
+\end{align*}
+
+
+\item[b)]
+
+\begin{align*}
+    \dv{y}{x} = \frac{4x-7y}{-4x+7y-5}, \qquad y(0)=1
+\end{align*}
+
+Para resolver este problema vamos a proponer el cambio de variable $u=-4x+7y-5$, de donde nos resultan las siguientes igualdades 
+
+\begin{align*}
+    \dx{u}&=7\dx{y}-4\\
+    4x-7y&=-u-5
+\end{align*}
+
+Por lo que sustituyendo en la ecuación original tenemos
+
+\begin{align*}
+    \dfrac{1}{7}\pr{\dx{u}+4}&=\dfrac{-\pr{u+5}}{u}\\
+    \Rightarrow  \dx{u}&=\dfrac{-7\pr{u+5}}{u}-4=\dfrac{-7u-35-4u}{u}\\
+    \Rightarrow  \dx{u}&=\dfrac{-\pr{11u+35}}{u} \\ 
+    \Rightarrow \dfrac{u}{11u+35}du&=-dx
+\end{align*}
+
+Para integrar el miembro izquierdo haremos el cambio de variable $w=11u+35$, lo que nos resulta que $u=\dfrac{1}{11}\pr{w-35}$ y $\dfrac{dw}{11}=du$, por lo que tenemos
+
+\begin{align*}
+    \dfrac{1}{121}\int\dfrac{w-35}{w}dw&=-\int dx \\ 
+    \Rightarrow \dfrac{1}{121}\pr{\int dw - 35 \int \dfrac{dw}{w}  }&=-x+C_2 \\ 
+    \dfrac{1}{121}\pr{w-35\ln\nr{w}}+C_1&=-x+C_2
+\end{align*}
+
+Sustituyendo $w=-44x+77y-20$ y haciendo $C=121(C_2-C_1)$ tenemos
+
+\begin{align*}
+    -44x+77y-20-35\ln\nr{-44x+77y-20}&=-121x+C \\
+    \Rightarrow 35\ln \nr{-44x+77y-20}&=77x+77y+C_f  ~~~~~~~~~~~~ \text{con $C_f=-C-20$} 
+\end{align*}
+
+Vamos a aplicar el PVI, haciendo $x=0$, $y=1$
+
+\begin{align*}
+    35\ln\nr{77-20}&=77+C_f\\
+   \therefore C_f &= 35\ln\nr{57}-77
+\end{align*}
+
+Por lo que la solución al problema queda expresada como 
+
+\begin{align*}
+    \ln\nr{-44x+77y-20}&=\dfrac{77}{35}\pr{x+y-1}+\ln\nr{57} \\
+    \Rightarrow \ln\nr{-44x+77y-20}-\ln\nr{57}&=\dfrac{77}{35}\pr{x+y-1}
+\end{align*}
+
+\begin{center}
+    \fbox{$\therefore \ln\nr{\dfrac{-44x+77y-20}{57}}=\dfrac{77}{35}\pr{x+y-1}$}
+\end{center}
+
+
+
+\end{enumerate}

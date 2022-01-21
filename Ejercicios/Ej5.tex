@@ -1,0 +1,107 @@
+\begin{enumerate}
+    \item[5.] Resuelve la ecuación de Ricatti con valores iniciales
+\end{enumerate}
+\begin{enumerate}
+    \item[a)] $y'=3t^{-2}-t^{-4}+2(t^{-1}-t^{-3})y-t^{-2}y^{2}, \qquad y(1)= - \frac{1}{2}, \qquad y_{1}(t)=-\frac{1}{t}$
+\end{enumerate}
+\begin{align*}
+    y' = \underbrace{3t^{-2}-t^{-4}}_{q_{1}(x)}+\underbrace{2(t^{-1}-t^{-3})}_{q_{2}(x)}y_{1}-\underbrace{t^{-2}}_{q_{3}(x)}y_{1}^{2}, \quad y(1)= - \frac{1}{2}, \quad y_{1}(t)=-\frac{1}{t}
+\end{align*}
+Tiene la forma de la ecuación de Ricatti
+\begin{align*}
+    y=y_{1}+\frac{1}{2} & \implies y'=y_{1}'-\frac{z'}{z^{2}}\\
+    y = -\frac{1}{t}+\frac{1}{2} & \implies y'= -\frac{t'}{t^{2}}- \frac{z'}{z^{2}}
+\end{align*}
+\begin{align*}
+    \left( -\frac{t}{t^{2}}- \frac{z'}{z^{2}} \right)= 3t^{-2}-t^{-4}+2(t^{-1}-t^{-3})\left( -\frac{1}{t}+\frac{1}{2} \right) -t^{-2} \left( -\frac{1}{t}+\frac{1}{2} \right)^{2}
+\end{align*}
+Sabemos que $y_{1}'$ es solución. Por la forma llegada en clase
+\begin{align*}
+    z' +\left(2q_{3}(x)y_{1}+q_{2}(x)\right)z&=-q_{3}(x)
+    & & \text{Sustituyendo}\\
+    z' + \left(2(-t^{-2})\left( -\frac{1}{t}\right)+2(t^{-1}-t^{-3}\right)z & =-t^{-2}
+    & &  \text{Una ecuación lineal }p(t)
+\end{align*}
+Por lo visto en clase la solución de esta ecuación
+\begin{align*}
+    \mu(t) = e^{\int p(t)dt} & \implies \frac{2t^{-2}}{t}+2t^{-1}-2t^{-3}=p(t)\\
+    & \implies \int p(t)\dd t = 2\int \frac{1}{t^{3}}\dd t + 2t^{-1}-2t^{-3} \dd t\\
+    & \implies 2\int t^{-3}\dd t + 2 \int t^{-1} \dd t - 2\int t^{-3} \dd t\\
+    & \implies 2 \int t^{-1} \dd t \\
+    & \implies 2 \ln \mid t \mid + C 
+\end{align*}
+Regresando, $\displaystyle e^{\left({\int p(t) \dd t}\right)} = e^{\left( 2 \ln \mid t \mid + C \right)} \implies e^{(2 \ln \mid t \mid)} \cdot e^{C} = t^{2} e^{C}$\\
+
+Volviendo a la ecuación lineal, donde $c=0$, resolviendo por factor integrante
+\begin{align*}
+    t^{2}\cdot z' + t^{2}\left( \frac{2t^{2}}{2} +2t^{-1} -2t^{-3} \right) = t^{2}(-t^{-2}) \implies t^{2}\left( \frac{-1}{t^{2}}\right) = -1
+\end{align*}
+\begin{align*}
+    t^{2}z = \int -1dt \implies t^{2}z= -t + C
+\end{align*}
+Regresando a la original
+\begin{align*}
+    y  & = - \frac{1}{t}+ \frac{1}{2}\\
+    y + \frac{1}{t} & \implies z = \frac{1}{y+\frac{1}{t}}\\
+    & \implies \frac{1}{y+\frac{1}{t}} = -t+ C 
+    & & \text{Es la solución general.}
+\end{align*}
+Para nuestra C, tenemos que $y(1)= -\frac{1}{2}$
+\begin{align*}
+    \frac{1}{-\frac{1}{2}+\frac{1}{1}}=-1+C \implies \frac{1}{\frac{1}{2}}= -1+C \implies 2+1 = C = 3
+\end{align*}
+Para la solución general $\displaystyle \frac{1}{y+\frac{1}{t}}=-t+3$
+\begin{align*}
+    y = \frac{1}{-t+3}- \frac{1}{t}
+\end{align*}
+\begin{enumerate}
+    \item[b)] $y'= - (t^{2}+6t+4)+2(t+3)y-y^{2}, \qquad y(1)= \frac{5}{2}; \qquad y_{1}(t)=t+1$
+\end{enumerate}
+\begin{align*}
+    y'= - \underbrace{(t^{2}+6t+4)}_{q_{1}(x)}+\underbrace{2(t+3)}_{q_{2}(x)}y-\underbrace{1}_{q_{3}(x)}y^{2}, \quad y(1)= \frac{5}{2}; \quad y_{1}(t)=t+1
+\end{align*}
+Podemos ver que si cumple la forma de Ricatti\\
+
+Sea $\displaystyle y=y_{1}+\frac{1}{2} \implies y=(t+1)+\frac{1}{2} \implies y' = (t+1)+\frac{1}{2} \implies y'=(t+1)'+\frac{z'}{z^{2}}= 1 + \frac{z'}{z^{2}}$
+Sustituyendo
+\begin{align*}
+    \left( 1 + \frac{z'}{z^{2}}\right) = - \underbrace{(t^{2}+6t+4)}_{q_{1}(x)}+\underbrace{2(t+3)}_{q_{2}(x)}\left( t+1+\frac{1}{2} \right)-\underbrace{1}_{q_{3}(x)}\left( t+1+\frac{1}{2} \right)^{2}
+\end{align*}
+$y_{1}'$ es solución. Por lo que usando la forma a la que se llegó
+\begin{align*}
+    z'+(2q_{3}(x)\cdot y_{1}+q_{2}(x))\cdot 2 & = -q_{3}(x)\\
+    z'+(2\cdot-1\cdot(t+1)+2(t+3))\cdot2&=-1\\
+    z' +(-2t-2+2t+6)\cdot 2 &= -1\\
+    z'+4z & = -1
+    & & \text{Ya es lineal}
+\end{align*}
+Usando $\displaystyle \mu(t)=e^{\int p(t)dt} \implies \int 4 dt = 4t$
+\begin{align*}
+    4t\cdot z' + 4t(4z)=-4t & \implies 4tz'+16tz=-4t\\
+    & \implies 4 tz = \implies - \int 4t dt\\
+    & \implies -4 \frac{t^{2}}{2} + C = 4tz\\
+    & \implies -2t^{2}=4tz\\
+    & \implies z = -\frac{2t^{2}}{4t} + C\\
+    & \implies - \frac{t}{2}+C = 2
+\end{align*}
+De $\displaystyle y=\frac{1}{2}+t+1$ tenemos
+\begin{align*}
+    y-t-1 = \frac{1}{2} &\implies \frac{1}{y-t-1}=2\\
+    & \implies \frac{1}{y-t-1}= - \frac{t}{2}+ C\\
+    & \implies \frac{1}{-\frac{t}{2}+ C}=y-t-1\\
+    & \implies y = \frac{1}{-\frac{t}{2}+ C}-t-1
+    & & \text{Forma implícita}
+\end{align*}
+Si $y(1)= \frac{5}{2}$
+\begin{align*}
+    \frac{5}{2}= \frac{1}{-\frac{1}{2}+ C}-1-1 & \implies \frac{5}{2}= \frac{1}{-\frac{1}{2}+ C}-2\\
+    & \implies \frac{5}{2}-2 = \frac{1}{2} + C\\
+    & \implies \frac{1}{2} = \frac{1}{\frac{1}{2}+C}\\
+    & \implies \frac{1}{2}+ C = 2\\
+    & \implies C = 2 - \frac{1}{2}\\
+    & \implies \frac{3}{2}= C
+\end{align*}
+Por lo tanto, la solución general es
+\begin{equation*}
+    y = \frac{1}{-\frac{t}{2}+\frac{3}{2}} -t-1
+\end{equation*}
